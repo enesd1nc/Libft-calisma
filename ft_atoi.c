@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 //#include "libft.h" // <libft.h> sistem dosyalarında kütüphaneyi arar(gcc ile gelenler) ,ddiğeri ise bulundugu dizinde arar(kendi projelerin)
-
+// burada kütüphane eklemeye gerek yok çünki yabancı bir fonksiyon tanımlamadık.
 	int	ft_atoi(const char *str) //const kullanmamızın sebebi değişkenin içeriğinde bir değişiklik olmayacagını belirtmek için(okunurlugu arttırır)
 {
 	int	res;
