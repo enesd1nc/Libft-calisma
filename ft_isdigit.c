@@ -1,19 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdinc <mdinc@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/09 15:57:56 by mdinc             #+#    #+#             */
-/*   Updated: 2024/10/09 15:57:56 by mdinc            ###   ########.fr       */
+/*   Created: 2024/10/09 16:25:21 by mdinc             #+#    #+#             */
+/*   Updated: 2024/10/09 16:35:25 by mdinc            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
 
-void    ft_bzero(void *s, size_t n)
+int	ft_isdigit(int c)
 {
-    ft_memset(s, '\0',n);
+	if (c >= 48 && c <= 57)
+		return (1);
+	return (0);
 }
-// bunun amacı memset ile aynı sadece içini null ile dolduruyor  dizi içini temizlemek için kullanılır
+int main()
+{
+	printf("%d",ft_isdigit(49));
+}

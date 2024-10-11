@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "libft.h"
-#include <string.h>
+#include "libft.h"
+
 void	*ft_memset(void *b, int c, size_t len) // size_t dizi elemanlarının sayısını saklar
 {
     unsigned char	*tmp_ptr;//unsigned olmasının sebebi (0-255) arası ascii değer alabilmesi
@@ -27,7 +27,7 @@ void	*ft_memset(void *b, int c, size_t len) // size_t dizi elemanlarının sayı
     }
     return (b);
 }
-#include <stdio.h>
+
 int main()
 {
     char    str[5];
