@@ -14,15 +14,16 @@
 #include <string.h>
 void	*ft_memset(void *b, int c, size_t len) // size_t dizi elemanlarının sayısını saklar
 {
-    size_t  i;
-    unsigned char   value = (unsigned char) c; // parantez kullanımının sebebi tür değişikliği yaptıgımızı belirtir
-// c yi char a çevirmemizin nedeni ascii deger olarak 0 ile 255 arasındakiler ile ilgilendiğimiz için 
+    unsigned char	*tmp_ptr;//unsigned olmasının sebebi (0-255) arası ascii değer alabilmesi
+//boş bir işaretçi oluşturmamızın sebebi b ye tür dönüşümü yapsak bile b void olarak kalır ancak bir değere atarsak b yi o atadıgımız değer hangi dönüşümü yaptıysak ona dönüşür.peki b ile neden dogrudan işlem yapamıyoruz? çünki void işaretçisi türsüz bir işaretçidir.işaret ettiği bellek alanındaki veriyi değiştiremezsin
+    tmp_ptr = (unsigned char *) b; // parantez kullanımının sebebi tür değişikliği yaptıgımızı belirtir b işaretçisinin tuttuğu adres tmp ye aktarılır.
+
 // memsete girilen bir byte lık yer kaplamalı
-    i = 0;
-    while (i < len)
+    
+    while (len > 0)
     {
-        *((unsigned char *)b + i) = value;
-        i++;
+        *(tmp_ptr++) =(unsigned char) c;// c yi char a çevirmemizin nedeni ascii deger olarak 0 ile 255 arasındakiler ile ilgilendiğimiz için .byte byte manipülasyon yapmamızı sağlar.
+        len--;
     }
     return (b);
 }
@@ -36,4 +37,5 @@ int main()
     printf("%s",str); //printf ifadesi dizinin sonuna otamatik olarak gider write gibi değil
 }
 // burada bir dizinin içini istediğimiz karakterle doldurmak için yapıyoruz.
+
 
