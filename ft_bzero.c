@@ -17,3 +17,16 @@ void    ft_bzero(void *s, size_t n)
     ft_memset(s, '\0',n);
 }
 // bunun amacı memset ile aynı sadece içini null ile dolduruyor  dizi içini temizlemek için kullanılır
+int main()
+{
+	char	e[10];
+	ft_bzero(e, sizeof(e));
+	size_t i ;
+	i = 0;
+	int a = sizeof(e);
+	while (i < a)
+	{
+		printf("%d",e[i]);
+		i++;
+	}
+}

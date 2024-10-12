@@ -1,0 +1,9 @@
+pointer ile ilgili notlar!
+-pointer bir adres tutucudur
+-swapdaki kullanım şekli 
+=> *a = *b; burada b nin tuttugu adresdeki değeri a nın tuttugu adrese atar.
+-a = *b; demek ise a bir pointer olmadıgı için b nin tuttugu adresdeki değeri a ya atar.
+-baska örnek kullanım:
+>= int	*a;
+a = *b; şuan a bir adres tutucu oldu ve b nin işaret ettiği adresi artık a da işaret ediyor.
+
