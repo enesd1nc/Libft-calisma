@@ -16,7 +16,7 @@ void    ft_bzero(void *s, size_t n)
 {
     ft_memset(s, '\0',n);
 }
-// bunun amacı memset ile aynı sadece içini null ile dolduruyor  dizi içini temizlemek için kullanılır
+/*bunun amacı memset ile aynı sadece içini null ile dolduruyor  dizi içini temizlemek için kullanılır
 int main()
 {
 	char	e[10];
@@ -29,4 +29,4 @@ int main()
 		printf("%d",e[i]);
 		i++;
 	}
-}
+}*/

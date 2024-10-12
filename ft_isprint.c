@@ -18,8 +18,8 @@ int	ft_isprint(int c)
 		return (1);
 	return (0);
 }
-int main()
+/*int main()
 {
 	printf("%d",ft_isprint(65));
 }
-//burda paremetre olarak girdiğimiz int karekterlerin ascii değerini temsil ediyor
+burda paremetre olarak girdiğimiz int karekterlerin ascii değerini temsil ediyor*/

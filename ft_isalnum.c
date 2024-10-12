@@ -16,9 +16,9 @@ int ft_isalnum(int c)
         return (1);
     return (0);    
 }
-#include <stdio.h>
+/*#include <stdio.h>
 int main()
 {
     printf("%d",ft_isalnum(50));
 }
-//alfabetik veya rakam olup olmadıgını kontrol eder
+alfabetik veya rakam olup olmadıgını kontrol eder*/

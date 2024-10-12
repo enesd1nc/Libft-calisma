@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdinc <mdinc@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -9,8 +9,8 @@
 /*   Updated: 2024/10/08 10:55:23 by mdinc            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-//#include "libft.h" // <libft.h> sistem dosyalarında kütüphaneyi arar(gcc ile gelenler) ,ddiğeri ise bulundugu dizinde arar(kendi projelerin)
-// burada kütüphane eklemeye gerek yok çünki yabancı bir fonksiyon tanımlamadık.
+/*#include "libft.h"  <libft.h> sistem dosyalarında kütüphaneyi arar(gcc ile gelenler) ,ddiğeri ise bulundugu dizinde arar(kendi projelerin)
+burada kütüphane eklemeye gerek yok çünki yabancı bir fonksiyon tanımlamadık.*/
 	int	ft_atoi(const char *str) //const kullanmamızın sebebi değişkenin içeriğinde bir değişiklik olmayacagını belirtmek için(okunurlugu arttırır)
 {
 	int	res;
@@ -37,8 +37,8 @@
 	}
 	return (res * s);
 }
-#include <stdio.h>
+/*#include <stdio.h>
 int main()
 {
 	printf("%d",ft_atoi("123"));
-}
+}*/

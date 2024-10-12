@@ -47,6 +47,6 @@ memsete girilen bir byte lık yer kaplamalı*/
     str[4] = '\0';
     printf("%s",str); //printf ifadesi dizinin sonuna otamatik olarak gider write gibi değil
 }
-// burada bir dizinin içini istediğimiz karakterle doldurmak için yapıyoruz.
+ burada bir dizinin içini istediğimiz karakterle doldurmak için yapıyoruz.*/
 
 
