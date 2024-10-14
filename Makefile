@@ -1,11 +1,11 @@
 NAME = libft.a #tüm c dosyalarının derlenip birleştirildiği statik kütüphane dosyasıdır
-CC = gcc #c derleyicisini belirtir
+CC = cc #c derleyicisini belirtir
 CFLAGS = -Wall -Wextra -Werror #-Wall tüm önemli uyarı mesajlarını etkinleştirir
 #-Wextra ekstra uyarı mesajlarını etkinleştirir 
 #-Weror uyarıları hataya dönüştürür yani uyarı algılandıgında derleme başarısız olur.
 RM = rm -f #rm komutu dosya siler 
 #-f bayrağı ise dosya var olmasa bile komutun hata vermeden çalışmasını sağlar
-SRC = ft_atoi.c ft_isalnum.c ft_isdigit.c ft_memset.c ft_bzero.c ft_isalpha.c ft_isprint.c ft_isascii.c ft_strlen.c ft_toupper.c ft_tolower.c ft_memcpy.c
+SRC = ft_atoi.c ft_isalnum.c ft_isdigit.c ft_memset.c ft_bzero.c ft_isalpha.c ft_isprint.c ft_isascii.c ft_strlen.c ft_toupper.c ft_tolower.c ft_memcpy.c ft_strlcpy.c
 
 OBJ = $(SRC:.c=.o) #.c ile biten kaynak dosyalarını .o uzantılı nesne dosyalarına dönüştürür
 #bu nesne dosyaları daha sonra bir araya getirilip çalıştırılabilir program oluşturulur.
