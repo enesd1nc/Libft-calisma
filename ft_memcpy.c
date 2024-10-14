@@ -11,3 +11,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	belirtmek için kullandık */
 	return (dst);
 }
+/*burada boş bir değişken belirlemememizin sebebi dst ile dogrudan
+ * matematiksel işlem yapmadık (dst++) gibi memsetde bunu yaptıgımız için 
+ * boş bir değişken tanımladık çünkü void türünde matematiksel işlem
+ * yapamazsın.*/
