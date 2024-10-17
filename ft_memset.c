@@ -16,7 +16,10 @@ void	*ft_memset(void *b, int c, size_t len) // size_t dizi elemanlarının sayı
 {
     unsigned char	*tmp_ptr;/*unsigned olmasının sebebi (0-255) arası ascii değer alabilmesi
 boş bir işaretçi oluşturmamızın sebebi b ye tür dönüşümü yapsak bile 
-b void olarak kalır ancak bir değere atarsak b yi o atadıgımız 
+b void olarak kalır(
+çünki bu bir dizi tüm adresleri değil sadece başlangıcı cast etmiş olduk 
+döngüde kullanırsak hepsini cast etmiş oluruz ve içini değiştirebiliriz)
+ancak bir değere atarsak b yi o atadıgımız 
 değer hangi dönüşümü yaptıysak ona dönüşür.
 peki b ile neden dogrudan işlem yapamıyoruz? çünki void işaretçisi türsüz bir işaretçidir.
 işaret ettiği bellek alanındaki veriyi değiştiremezsin*/
