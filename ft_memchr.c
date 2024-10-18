@@ -8,10 +8,12 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	while (i < n)
 	{
 		if (*((unsigned char *)s + i) == (unsigned char)c)
-			//s[i] yerine s + i de aynı anlama gelir
+			//array[i] = *(array + i) aynı anlama gelir.
+			//biri dizi notasyonu diğeri ise pointer aritmatiğidir.
+			//*(array + i) de indexi i kadar öteler ve o adresteki değeri değişir.
 			return((void *)s + i);
-		//index char da kaldıgı için bu returnde olması gereken void e çevirdik.
-		//paremetre nasıl başladıysa en son o türde çıkmalı.
+		/*index char da kaldıgı için bu returnde olması gereken void e çevirdik.
+		*çünki fonksiyon void olarak tanımlanmış */
 		i++;
 	}
 	return (NULL);
