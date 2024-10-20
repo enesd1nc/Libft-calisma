@@ -16,6 +16,7 @@
 # include <stdio.h>
 # include <string.h>
 # include <unistd.h>
+# include <stdlib.h>
 
 int	ft_isalpha(int c);
 int	ft_isdigit(int c);
@@ -47,6 +48,7 @@ char	*ft_strdup(const char *s1);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
+char	*ft_srtmapi(char const *s, char (*f)(unsigned int, char));
 
 void	ft_bzero(void *s, size_t n);
 
