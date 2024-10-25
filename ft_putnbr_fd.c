@@ -16,7 +16,8 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putnbr_fd(number / 10, fd);
 		ft_putnbr_fd(number % 10, fd);
 	}
-	ft_putchar_fd(number + '0', fd);//rakam ile 0 karektrinin ascii karsılıgını (48)
+	else 
+		ft_putchar_fd(number + '0', fd);//rakam ile 0 karektrinin ascii karsılıgını (48)
 					//ile toplar çıkan sayının ascii karsılıgına denk gelen
 					//rakamı yazdırır.
 }

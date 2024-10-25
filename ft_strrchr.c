@@ -13,3 +13,4 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (0);
 }
+//buldugu yerden itibaren yazar.
