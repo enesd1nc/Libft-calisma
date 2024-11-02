@@ -6,7 +6,7 @@
 /*   By: mdinc <mdinc@student.42kocaeli.com.tr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 10:40:18 by mdinc             #+#    #+#             */
-/*   Updated: 2024/10/25 20:01:33 by mdinc            ###   ########.fr       */
+/*   Updated: 2024/11/02 15:15:44 by mdinc            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	test_bzero(void)
 {
 	char	s[] = "enes"; //*s olarak tanımlasaydık sabit bellek alanında tutulurdu(read only) yani üzerinde değişiklik yapamayız.
 	ft_bzero(s,3);
-	printf("%s", s);
+	printf("%s\n", s);//nulla gelince otamatik durdugu için enes deki ilk 3 üni nullasak bile s harfini çıktıda göremeyiz ama orda vardır.
 }
 
 void	test_calloc(void)
@@ -95,8 +95,17 @@ void	test_memset(void)
 {
 	char	s[] = "enes";
 	char	*a;
-	a = (char *)ft_memset(s, 65, 4);
+	a = (char *)ft_memset(s, 65, 3);
 	printf("%s\n", a);
+	/*int	s[] = {2,3,4};
+	int	*a;
+	int i = 0;
+	a = (int *)ft_memset(s,12,3*sizeof(int));
+	while (i < 3)
+	{
+		printf("%d\n", a[i]);
+		i++;
+	}*/
 }
 
 void	test_putchar(void)
@@ -179,6 +188,16 @@ void	test_strjoin(void)
 	printf("%s\n", ft_strjoin("enes", "ali"));
 }
 
+void	test_substr(void)
+{
+	printf("%s\n", ft_substr("enes", 1, 2));
+}
+
+void	test_strtrim(void)
+{
+	printf("%s\n", ft_strtrim("aaenesaa","a"));
+}
+
 int	main(void)
 {
 	//test_isalpha();
@@ -208,4 +227,6 @@ int	main(void)
 	//test_tolower();
 	//test_toupper();
 	//test_strjoin();
+	//test_substr();
+	test_strtrim();
 }
