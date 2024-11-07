@@ -6,7 +6,7 @@
 /*   By: mdinc <mdinc@student.42kocaeli.com.tr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 10:40:18 by mdinc             #+#    #+#             */
-/*   Updated: 2024/11/02 15:15:44 by mdinc            ###   ########.fr       */
+/*   Updated: 2024/11/07 17:31:57 by mdinc            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -198,6 +198,29 @@ void	test_strtrim(void)
 	printf("%s\n", ft_strtrim("aaenesaa","a"));
 }
 
+void	test_itoa(void)
+{
+	printf("%s\n1", ft_itoa(123));
+}
+
+void	test_split(void)
+{
+	char	**result;
+	char	str[] = "Hello world this is 42 school";
+	int	i = 0;
+	result = ft_split(str, ' ');
+	while (result[i])
+	{
+		printf("%s\n", result[i]);
+		i++;
+	}
+}
+
+void	test_memcmp(void)
+{
+	printf("%d\n", ft_memcmp("a", "b", 1));
+}
+
 int	main(void)
 {
 	//test_isalpha();
@@ -228,5 +251,8 @@ int	main(void)
 	//test_toupper();
 	//test_strjoin();
 	//test_substr();
-	test_strtrim();
+	//test_strtrim();
+	//test_itoa();
+	//test_split();
+	test_memcmp();
 }

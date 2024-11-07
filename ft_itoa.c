@@ -1,6 +1,6 @@
 #include "libft.h"
 
-int	d_count(int nbr)
+static int	d_count(int nbr)//basamak sayısı bulma fonksiyonu
 {
 	int	nbr_len;
 
@@ -43,3 +43,4 @@ char	*ft_itoa(int n)
 	}
 	return (str);
 }
+//calloc zaten her yeri önceden null ladıgı için sonuna null eklememize gerek kalmadı.

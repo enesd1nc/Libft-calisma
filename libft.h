@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                             :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mdinc <mdinc@student.42.fr>                +#+  +:+       +#+        */
+/*   By: mdinc <mdinc@student.42kocaeli.com.tr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 16:25:21 by mdinc             #+#    #+#             */
-/*   Updated: 2024/10/09 16:35:25 by mdinc            ###   ########.fr       */
+/*   Updated: 2024/11/07 17:21:45 by mdinc            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ int	ft_toupper(int c);
 int	ft_tolower(int c);
 int	ft_atoi(const char *str);
 int	ft_strncmp(const char *s1, const char *s2, size_t n);
+int	ft_memcmp(const void *s1, const void *s2, size_t n);
 
 size_t	ft_strlen(const char *s);
 size_t  ft_strlcpy(char *dest, const char *src, size_t size);
@@ -54,5 +55,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_itoa(int n);
+char	**ft_split(char const *s, char c);
 
 #endif
