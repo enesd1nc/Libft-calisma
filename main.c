@@ -6,12 +6,14 @@
 /*   By: mdinc <mdinc@student.42kocaeli.com.tr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 10:40:18 by mdinc             #+#    #+#             */
-/*   Updated: 2024/11/07 17:31:57 by mdinc            ###   ########.fr       */
+/*   Updated: 2024/11/08 21:39:59 by mdinc            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
+#include <fcntl.h>
+#include <unistd.h>
 
 void	test_isalpha(void)
 {
@@ -110,22 +112,34 @@ void	test_memset(void)
 
 void	test_putchar(void)
 {
-	ft_putchar_fd('e', 1);
+	//ft_putchar_fd('e', 1);
+	int fd = open("output.txt", O_WRONLY | O_CREAT , 0644);
+	ft_putchar_fd('a', fd);
+	close(fd);
 }
 
 void	test_putendl(void)
 {
-	ft_putendl_fd("enes", 1);
+	//ft_putendl_fd("enes", 1);
+	int fd = open ("enes.txt", O_WRONLY | O_CREAT, 0644);//open("dosya adı",dosya açma flagleri,dosya izinleri)
+	                                                     //W_ORNLY sadece yazma 0_CREAT dosya yoksa oluştur
+	ft_putendl_fd("evo", fd);
+	close(fd);
 }
 
 void	test_putnbr(void)
 {
-	ft_putnbr_fd(-123, 1);
+	int fd = open("evo.txt", O_WRONLY | O_CREAT, 644);
+	ft_putnbr_fd(123, fd);
+	//ft_putnbr_fd(-123, 1);
 }
 
 void	test_putstr(void)
 {
-	ft_putstr_fd("enes\n", 1);
+	char	s[25] = "tamam";
+	int fd = open("hasta.txt", O_WRONLY | O_CREAT, 644);
+	ft_putstr_fd(s, fd);
+	//ft_putstr_fd("enes\n", 1);
 }
 
 void	test_strchr(void)
@@ -185,7 +199,7 @@ void	test_toupper(void)
 
 void	test_strjoin(void)
 {
-	printf("%s\n", ft_strjoin("enes", "ali"));
+	printf("%s\n", ft_strjoin("enes", "tolga"));
 }
 
 void	test_substr(void)
@@ -221,6 +235,19 @@ void	test_memcmp(void)
 	printf("%d\n", ft_memcmp("a", "b", 1));
 }
 
+char	upper(unsigned int i, char e)
+{
+	(void)i;
+	if (e >= 97 && e <=122 )
+		e -= 32;
+	return (e);
+}
+
+void	test_strmapi(void)
+{
+	printf("%s\n", ft_strmapi("enes", upper));
+}
+
 int	main(void)
 {
 	//test_isalpha();
@@ -254,5 +281,6 @@ int	main(void)
 	//test_strtrim();
 	//test_itoa();
 	//test_split();
-	test_memcmp();
+	//test_memcmp();
+	test_strmapi();
 }
