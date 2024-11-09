@@ -6,7 +6,7 @@
 /*   By: mdinc <mdinc@student.42kocaeli.com.tr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 16:25:21 by mdinc             #+#    #+#             */
-/*   Updated: 2024/11/08 21:42:09 by mdinc            ###   ########.fr       */
+/*   Updated: 2024/11/08 22:06:04 by mdinc            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n);
 int	ft_memcmp(const void *s1, const void *s2, size_t n);
 
 size_t	ft_strlen(const char *s);
-size_t  ft_strlcpy(char *dest, const char *src, size_t size);
+size_t  ft_strlcpy(char *dest, const char *src, size_t dstsize);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 
 

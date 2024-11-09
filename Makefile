@@ -26,10 +26,10 @@ all: $(NAME)
 #makefile ilk başta hedefin bağımlılığını oluşturur(kuralını)
 
 
-#ar(archive)birden fazla nesne dosyasını bir arşivde birleştirir.
-#-r arşive dosyalar ekler eğer dosyalar güncel değilse onları günceller
-#-c eğer arşiv dosyası mevcut değilse yeni bir arşiv dosyası oluşturur
-#-s arşiv dosyasına bir dizin ekler böylece aranan fonksiyonlar daha hızlı bulunur
+#ar: Arşivleme aracıdır. Genellikle statik kütüphaneler oluşturmak için kullanılır. Statik kütüphaneler, birden fazla nesne dosyasını (object files, yani .o dosyalarını) tek bir dosyada birleştirir.
+#r: Arşive dosya ekler (replace). Eğer dosya arşivde zaten varsa, onun yerine yeni versiyonunu koyar.
+#c: Arşivin yeni olduğuna dair bir uyarı göstermez. Eğer bu seçenek kullanılmazsa ve arşiv yoksa, arşivin oluşturulacağına dair bir uyarı verilir.
+#s: Arşive bir dizin ekler, yani arşivdeki dosyaları hızlıca bulabilmek için bir dizin yapısı oluşturur.
 $(NAME):	$(OBJ)  #burda NAME in bağımlılıgını görür yani NAME  oluşmasını için OBJ nin ilk oluşması lazımdır bu seferde OBJ yi nasıl 
                     #olusturacagını aramaya başlar.  .o uzantılı target e gider 
 	ar rcs $(NAME) $(OBJ) 

@@ -6,7 +6,7 @@
 /*   By: mdinc <mdinc@student.42kocaeli.com.tr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 10:40:18 by mdinc             #+#    #+#             */
-/*   Updated: 2024/11/08 21:39:59 by mdinc            ###   ########.fr       */
+/*   Updated: 2024/11/09 20:25:59 by mdinc            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ void	test_memcpy(void)
 	char	*e = "enes";
 	char	*a;
 	s = (char *)malloc(5);
-	a = (char *)ft_memcpy(s, e, 4);
+	a = (char *)ft_memcpy(e+2, e, 4);
 	s[4] = '\0';
 	printf("%s\n",a);
 	/*memcpy fonksiyonunda a, bir karakter dizisinin başlangıç adresini tutuyor. Yani aslında bir string'in başlangıcına işaret ediyor.
@@ -248,6 +248,21 @@ void	test_strmapi(void)
 	printf("%s\n", ft_strmapi("enes", upper));
 }
 
+void upper2(unsigned int i, char *s)
+{
+	i = 0;
+	if (s[i] >= 'a' && s[i] <= 'z')
+		s[i] -= 32;
+}
+
+void	test_striteri(void)
+{
+	char	e[] = "enes";
+	ft_striteri(e, upper2);
+	printf("%s\n", e);
+	
+}
+
 int	main(void)
 {
 	//test_isalpha();
@@ -282,5 +297,6 @@ int	main(void)
 	//test_itoa();
 	//test_split();
 	//test_memcmp();
-	test_strmapi();
+	//test_strmapi();
+	test_striteri();
 }
